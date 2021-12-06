@@ -2,8 +2,9 @@ namespace SpriteKind {
     export const Passenger = SpriteKind.create()
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Passenger, function (sprite, otherSprite) {
+    info.changeScoreBy(1)
     info.startCountdown(5)
-    person.setPosition(randint(25, 100), randint(25, 100))
+    person.setPosition(randint(0, 100), randint(0, 100))
 })
 let person: Sprite = null
 info.changeScoreBy(1)
