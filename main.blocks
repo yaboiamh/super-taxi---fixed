@@ -1,0 +1,35 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="?@h{_`Y)X.lOa1T|t$+z">Player</variable><variable type="KIND_SpriteKind" id="Q!YPR#Gtqcg1IE/?qr2,">Projectile</variable><variable type="KIND_SpriteKind" id="Hk^C]hM6PX?gs2Mj(@5v">Food</variable><variable type="KIND_SpriteKind" id="~}tR,DzN}$+}g2_J4n+*">Enemy</variable><variable type="KIND_SpriteKind" id="}vEM+TfDz!HoZrY#-FkU">Passenger</variable><variable id="?:ExYGzLqX_Jso%Al7k6">mySprite</variable><variable id="6?IO9U-Q8@cgISmYJlza">mySprite2</variable><variable id="IepxVml:[m~dDdHOlm~]">person</variable></variables><block type="pxt-on-start" id="GZ6okTSRp$Q%2+iY(/:*" x="0" y="0"><statement name="HANDLER"><block type="hudChangeScoreBy" id="U#W?y?8%Lat#S({k#DN?"><value name="value"><shadow type="math_number" id="Mz*A_}6PlJ-ynRW7!Z$^"><field name="NUM">1</field></shadow></value><next><block type="game_show_long_text" id="=t3-yxNI|M}u2`cnZY13"><field name="layout">DialogLayout.Bottom</field><value name="str"><shadow type="text" id="$QC)[?!o983DG~?-C^iR"><field name="TEXT">Use the arrow keys on the keyboard to pick up the passengers before time runs out!</field></shadow></value><next><block type="gamesetbackgroundcolor" id="BedBXl9[{`KiyU$n~O@U"><value name="color"><shadow type="colorindexpicker" id="I$JD%bKUt`]v7w,$`siH"><field name="index">11</field></shadow></value><next><block type="variables_set" id="uw@.|zr5jAsO;gG4VPBl"><field name="VAR" id="?:ExYGzLqX_Jso%Al7k6">mySprite</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="Y,/=6n*-e$Ft{cbKp]af"><value name="img"><shadow type="screen_image_picker" id="3^CDkAqJo69{6f.d+ClI"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . 3 3 3 3 3 3 3 3 . . . . 
+. . . 3 d 3 3 3 3 3 3 c 3 . . . 
+. . 3 c d 3 3 3 3 3 3 c c 3 . . 
+. 3 c c d d d d d d 3 c c d 3 d 
+. 3 c 3 a a a a a a a b c d 3 3 
+. 3 3 a b b a b b b a a b d 3 3 
+. 3 a b b b a b b b b a 3 3 3 3 
+. a a 3 3 3 a 3 3 3 3 3 a 3 3 3 
+. a a a a a a f a a a f a 3 d d 
+. a a a a a a f a a f a a a 3 d 
+. a a a a a a f f f a a a a a a 
+. a f f f f a a a a f f f a a a 
+. . f f f f f a a f f f f f a . 
+. . . f f f . . . . f f f f . . 
+. . . . . . . . . . . . . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":"3^CDkAqJo69{6f.d+ClI"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="P0m,hbGeEKo/-CXK-6gi"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="variables_set" id="[@[(.Fzl5}x:hp_?zvq@"><field name="VAR" id="IepxVml:[m~dDdHOlm~]">person</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="W;W15V}-hc07y78J+S/E"><value name="img"><shadow type="screen_image_picker" id=",CVqoVFFY+0{GgVy|Rd~"><field name="img">img`
+. . . . f f f f . . . . . 
+. . f f f f f f f f . . . 
+. f f f f f f c f f f . . 
+f f f f f f c c f f f c . 
+f f f c f f f f f f f c . 
+c c c f f f e e f f c c . 
+f f f f f e e f f c c f . 
+f f f b f e e f b f f f . 
+. f 4 1 f 4 4 f 1 4 f . . 
+. f e 4 4 4 4 4 4 e f . . 
+. f f f e e e e f f f . . 
+f e f b 7 7 7 7 b f e f . 
+e 4 f 7 7 7 7 7 7 f 4 e . 
+e e f 6 6 6 6 6 6 f e e . 
+. . . f f f f f f . . . . 
+. . . f f . . f f . . . . 
+`</field><data>{"commentRefs":[],"fieldData":{"img":",CVqoVFFY+0{GgVy|Rd~"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="Z9]rxupoiWnzm-Ck+a^A"><field name="MEMBER">Passenger</field></shadow></value></block></value><next><block type="game_control_sprite" id="-/wg.iq*OIoijWS8ou]k"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="2" _input_init="true"></mutation><value name="sprite"><shadow type="variables_get" id="BNhfO2DKKZ%CfKXo~C(_"><field name="VAR" id="?:ExYGzLqX_Jso%Al7k6">mySprite</field></shadow></value><value name="vx"><shadow type="math_number" id="eVqMi;`lU+y?T:P;/b^C"><field name="NUM">100</field></shadow></value><value name="vy"><shadow type="math_number" id="3($6]C:cuyG*G?H%d;L@"><field name="NUM">100</field></shadow></value><next><block type="mixer_play_sound" id="IoH-cRKIk{B9H_*[tfVw"><field name="sound">music.baDing</field></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" id="^6TLO]CmH!PUsBwgtq(6" x="10" y="510"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom" id="+JBmE$6|f%2gzxj:g6#d"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind" id="d86B;HT7c4N!dV9E#-JT"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom" id="Kx*0j1dMLG@T-Jst1#fa"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind" id="okx7,7]QYqeC=ng28ZGu"><field name="MEMBER">Passenger</field></shadow></value><statement name="HANDLER"><block type="gamecountdown" id="(SB]1Ek:-QHE^JRBw8$~"><value name="duration"><shadow type="math_number" id="]p@_Ic`vb%-2@[mSv?_h"><field name="NUM">5</field></shadow></value><next><block type="spritesetpos" id="^I*8NgZ[TxwKQ-4g(4HY"><value name="sprite"><block type="variables_get" id="~K/-IW(jUXAlF]z4cp3W"><field name="VAR" id="IepxVml:[m~dDdHOlm~]">person</field></block></value><value name="x"><shadow type="positionPicker"/><block type="device_random" id="vX`J`S.uy7=uchFU~Ri+"><value name="min"><shadow type="math_number" id="^/331D}~:k$$X+CrzhV4"><field name="NUM">25</field></shadow></value><value name="limit"><shadow type="math_number" id="y,vT;Ocq}Lo4l+a4uER+"><field name="NUM">100</field></shadow></value></block></value><value name="y"><shadow type="positionPicker"><field name="index">0</field></shadow><block type="device_random" id="r?FO!ObP9gFhpM,h,cWY"><value name="min"><shadow type="math_number" id="?a)EUkMXR~{F-PAlk}}P"><field name="NUM">25</field></shadow></value><value name="limit"><shadow type="math_number" id="S46llhcRd-#Hok9}cP*E"><field name="NUM">100</field></shadow></value></block></value></block></next></block></statement></block></xml>
